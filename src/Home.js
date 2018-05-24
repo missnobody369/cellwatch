@@ -7,11 +7,7 @@ class Home extends Component {
         <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 	      <div className="container">
 	        <a className="navbar-brand js-scroll-trigger" href="#">
-<<<<<<< HEAD
                 <img src="img/cw-globe-white.png" alt="Cellwatch logo" className="logo-black"></img>
-=======
-                <img src="img/logo.png" alt="Cellwatch logo" className="logo-black"></img>
->>>>>>> af838c37f0ef4616f667984b23810055250d5ea0
             </a>
 	        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	          <span className="navbar-toggler-icon"></span>

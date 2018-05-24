@@ -36,6 +36,9 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
 }
 
 .bg-primary {
@@ -82,11 +85,13 @@ img::-moz-selection {
 
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
-  background-color: #fff;
+  /* background-color: #fff; */
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
+  background-color: rgb(4, 112, 194);
+  box-shadow: 2px 1px 2px #0000009c;
 }
 
 #mainNav .navbar-brand {
@@ -105,7 +110,7 @@ img::-moz-selection {
   font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #212529;
+  color: #fff;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
@@ -127,7 +132,8 @@ img::-moz-selection {
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: rgb(4, 112, 194);
   }
   #mainNav .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
@@ -319,6 +325,6 @@ header.masthead p {
     width: 100%;
 }
 .logo-black {
-  width: 25%;
-  height: 25%;;
+  width: 30%;
+  height: 30%;;
 }

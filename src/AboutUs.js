@@ -5,7 +5,8 @@ class AboutUs extends Component {
     return (
   		<section className="section-steps container" id="about-us">
             <div className="row">
-                <h2>Mission, Vision & Values</h2>
+            <h2>Vission, Mission & Values</h2>
+            <hr className="my-4" />
             </div>
             <div className="row">
                 <div className="col span-1-of-2 steps-box">

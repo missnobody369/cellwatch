@@ -3,19 +3,6 @@ import axios from 'axios';
 
 class Admin extends Component {
 
-
-	// componentWillMount(){
- //   		const $this = this;
-	//     axios.get('http://localhost:3001/api/uploadbroadband')
-	//         .then(function (response) {
-	//         $this.setState({news:response.data})
-	//         console.log(response.data);
-	//         })
-	//         .catch(function (error) {
-	//         console.log(error);
-	//         });
-	// };
-
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const form = e.target;

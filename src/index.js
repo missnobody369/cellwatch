@@ -7,12 +7,17 @@ import createHistory from 'history/createBrowserHistory';
 import {BrowserRouter} from 'react-router-dom';
 import Admin from './Admin';
 import Home from './Home';
+import Login from './Login';
+
 
 ReactDOM.render((
-	<App>
-		<Route exact={true} path="/" component={Home} />
-		<Route exact={true} path="/admin" component={Admin} />
-	</App>
+	<Router history={createHistory}>
+		<App>
+			<Route exact={true} path="/" component={Home} />
+			<Route exact={true} path="/admin" component={Admin} />
+			<Route exact={true} path="/login" component={Login} />
+		</App>
+	</Router>
 ), 
 
 

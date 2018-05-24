@@ -4,12 +4,15 @@ import Services from './Services';
 import AboutUs from './AboutUs';
 import Admin from './Admin';
 import Broadband from './Broadband';
+import NavBar from './NavBar';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Admin />
+        <NavBar />
+        {this.props.children}
         <Broadband />
         <Home />
         <Services />

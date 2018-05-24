@@ -8,7 +8,7 @@ class Services extends Component {
 			     <div className="container-fluid p-0">
 			        <div className="row no-gutters popup-gallery">
 			          <div className="col-lg-3 col-sm-6">
-			            <a className="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+			            <a className="portfolio-box" href="../src/imguploaded/portfolio/fullsize/1.jpg">
 			              <img className="img-fluid" src="imguploaded/1.jpg" alt="" />
 			              <div className="portfolio-box-caption">
 			                <div className="portfolio-box-caption-content">

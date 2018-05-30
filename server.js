@@ -47,6 +47,15 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api', router);
 
+//login
+router.post('/login', (req, res, next) => {
+  connection.query('SELECT * FROM admin', (error, results, fields) => {
+    if (error) throw error;
+    res.json(results);
+  });
+});
+
+//insert
 router.post('/uploadbroadband', upload.single('imageupload'), (req, res, next) => {
   const reqObj = req.body;
   console.log('uploading..')
@@ -72,14 +81,14 @@ router.post('/uploadbroadband', upload.single('imageupload'), (req, res, next) =
 })
 
 //Select broadband
-router.get('/selectbroadband', (req, res) => {
+router.get('/selectbroadband', (req, res, next) => {
   connection.query("SELECT * FROM broadband", (error, results, fields) => {
     if (error) throw error;
     res.json(results);
   });
 });
 
-router.post('/updatebroadband', (req, res) => {
+router.post('/updatebroadband', (req, res, next) => {
     console.log(req.body);
     const reqObj = req.body;
     const caption = reqObj.caption;

@@ -82,7 +82,7 @@ class Broadband extends Component {
         broadband_rows.push(
           <div className="col-md-12" key={i}>
             <h4>{broadband.caption}</h4>
-            <img className="img-responsive" src={'/imguploaded/'+broadband.imageupload} alt="not working"/>
+            <img className="img-responsive" src={'/imguploaded/'+broadband.imageupload} alt="CELLWATCH"/>
             <p>{broadband.description}</p>
             <a onClick={() => this.openModal(broadband, broadband.id)}>Edit</a>
              <hr/>

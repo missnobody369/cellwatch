@@ -4,6 +4,8 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const mysql = require('mysql');
+const jwt = require('jsonwebtoken');
+const privateKey = 'cellwatch';
 const router = express.Router();
 const multer  = require('multer');
 const storage = multer.diskStorage({
@@ -49,9 +51,30 @@ app.use('/api', router);
 
 //login
 router.post('/login', (req, res, next) => {
-  connection.query('SELECT * FROM admin', (error, results, fields) => {
+  const reqObj = req.body;
+  const username = reqObj.username;
+  const password = reqObj.password;
+  console.log(req.body);
+
+  connection.query('SELECT * FROM admin WHERE username =? AND password =?',[username,password], (error, results, fields) => {
     if (error) throw error;
-    res.json(results);
+
+      if(results.length > 0){
+
+          const tokenData = {
+            username: results[0].username,
+            id: results[0].id
+          };
+          const result = {
+            user: results[0],
+            token: jwt.sign(tokenData, privateKey)
+          };
+
+          res.json(result);
+      }else{
+          res.send('User or Password is incorrect!');
+      }
+
   });
 });
 
@@ -88,6 +111,7 @@ router.get('/selectbroadband', (req, res, next) => {
   });
 });
 
+// Update broadband
 router.post('/updatebroadband', (req, res, next) => {
     console.log(req.body);
     const reqObj = req.body;
@@ -98,6 +122,30 @@ router.post('/updatebroadband', (req, res, next) => {
       res.json(results);
     });
 });
+
+//insert schedule
+router.post('/uploadschedule', (req, res, next) => {
+  const reqObj = req.body;
+  console.log('uploadingschedule..')
+  if(req.file){   
+    const projectname = req.file.projectname;
+    const dateofproject = reqObj.dateofproject;
+    const technician = reqObj.technician;
+    const details = reqObj.details;
+    const schedule = {
+        "projectname": projectname,
+        "dateofproject": dateofproject,
+        "technician": technician,
+        "details": details
+    }   
+    connection.query('INSERT INTO schedule SET ?', schedule, (error, results, fields) => {
+      if (error) throw error;
+      console.log(req.file)
+      console.log('after query')  
+      res.json({success:true})
+    });
+  }
+})
 
 app.listen(port, () => {
  console.log(`api running on port ${port}`);

@@ -79,18 +79,18 @@ router.post('/login', (req, res, next) => {
 });
 
 //insert
-router.post('/uploadbroadband', upload.single('imageupload'), (req, res, next) => {
+router.post('/uploadbroadband', upload.single('imagebroadband'), (req, res, next) => {
   const reqObj = req.body;
   console.log('uploading..')
   if(req.file){
     
-    const imagename = req.file.originalname;
-    const caption = reqObj.caption;
-    const description = reqObj.description;
+    const imagebroadband = req.file.originalname;
+    const captionbroadband = reqObj.captionbroadband;
+    const descriptionbroadband = reqObj.descriptionbroadband;
     const broadband = {
-        "imageupload": imagename,
-        "caption": caption,
-        "description": description
+        "imagebroadband": imagebroadband,
+        "captionbroadband": captionbroadband,
+        "descriptionbroadband": descriptionbroadband
     }
     
     connection.query('INSERT INTO broadband SET ?', broadband, (error, results, fields) => {
@@ -115,9 +115,9 @@ router.get('/selectbroadband', (req, res, next) => {
 router.post('/updatebroadband', (req, res, next) => {
     console.log(req.body);
     const reqObj = req.body;
-    const caption = reqObj.caption;
-    const description = reqObj.description;
-    connection.query('UPDATE broadband SET caption = ?, description = ? WHERE id = ?', [caption, description, reqObj.id], function (error, results, fields) {
+    const captionbroadband = reqObj.captionbroadband;
+    const descriptionbroadband = reqObj.descriptionbroadband;
+    connection.query('UPDATE broadband SET captionbroadband = ?, descriptionbroadband = ? WHERE id = ?', [captionbroadband, descriptionbroadband, reqObj.id], function (error, results, fields) {
       if (error) throw error;
       res.json(results);
     });

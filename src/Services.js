@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 class Services extends Component {
   render() {
+  	/*let services_rows = [];
+      this.state.services.map((services, i) => 
+        services_rows.push(
+          <div className="col-md-12" key={i}>
+            <img className="img-responsive" src={'/imguploaded/'+services.imagebroadband} alt="CELLWATCH"/>
+          </div>
+        )
+      );*/
     return (
       	<div>
       		<section className="p-0" id="portfolio">

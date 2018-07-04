@@ -9,9 +9,9 @@ class Broadband extends Component {
       this.state = {
         broadband: [],
         modalIsOpen: false,
-        caption: '',
-        description: '',
-        imageupload: '',
+        captionbroadband: '',
+        descriptionbroadband: '',
+        imagebroadband: '',
         id: 0
       };
       this.openModal = this.openModal.bind(this);
@@ -36,8 +36,8 @@ class Broadband extends Component {
 
     const self = this
     axios.post('http://localhost:3001/api/updatebroadband', {
-        caption: self.state.caption,
-        description: self.state.description,
+        captionbroadband: self.state.captionbroadband,
+        descriptionbroadband: self.state.descriptionbroadband,
         id:self.state.id
       })
       .then(function (response) {
@@ -56,8 +56,8 @@ class Broadband extends Component {
   openModal(broadband,id) {
     this.setState({
         modalIsOpen: true,
-        caption: broadband.caption,
-        description: broadband.description,
+        captionbroadband: broadband.captionbroadband,
+        descriptionbroadband: broadband.descriptionbroadband,
         id:id
     });
   }
@@ -81,9 +81,9 @@ class Broadband extends Component {
       this.state.broadband.map((broadband, i) => 
         broadband_rows.push(
           <div className="col-md-12" key={i}>
-            <h4>{broadband.caption}</h4>
-            <img className="img-responsive" src={'/imguploaded/'+broadband.imageupload} alt="CELLWATCH"/>
-            <p>{broadband.description}</p>
+            <h4>{broadband.captionbroadband}</h4>
+            <img className="img-responsive" src={'/imguploaded/'+broadband.imagebroadband} alt="CELLWATCH"/>
+            <p>{broadband.descriptionbroadband}</p>
             <a onClick={() => this.openModal(broadband, broadband.id)}>Edit</a>
              <hr/>
           </div>
@@ -98,9 +98,9 @@ class Broadband extends Component {
               contentLabel="Edit Broadband" >
               <form onSubmit={this.updateBroadband}>
                   <label>Caption</label>
-                  <input onChange={this.logChange} className="form-control" value={this.state.caption} name='caption' validations={['required']}/>
+                  <input onChange={this.logChange} className="form-control" value={this.state.captionbroadband} name='captionbroadband' validations={['required']}/>
                   <label>Description</label>
-                  <input onChange={this.logChange} className="form-control" value={this.state.description} name='description' validations={['required']}/>
+                  <input onChange={this.logChange} className="form-control" value={this.state.descriptionbroadband} name='descriptionbroadband' validations={['required']}/>
                   
                   <div className="submit-section">
                   <button className="btn btn-uth-submit" type="submit">Submit</button>

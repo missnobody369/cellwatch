@@ -8,8 +8,8 @@ class Home extends Component {
 	      	<div className="container my-auto">
 	        	<div className="row">
 	         		<div className="col-lg-10 mx-auto">
-	            		<h1 className="text-uppercase">
-	             			<strong>Your Favorite Source of Free Bootstrap Themes</strong>
+	            		<h1 className="text-uppercase headerText">
+	             			<strong>Cellwatch Communications</strong>
 	            		</h1>
 	            		<hr />
 	          		</div>
@@ -38,7 +38,7 @@ class Home extends Component {
 			<div className="container">
 				<div className="row">
 				  	<div className="col-lg-12 text-center">
-				    	<h2 className="section-heading">At Your Service</h2>
+				    	<h2 className="section-heading">Services</h2>
 				    	<hr className="my-4" />
 				  	</div>
 					</div>
@@ -48,49 +48,56 @@ class Home extends Component {
 				  		<div className="col-lg-3 col-md-6 text-center">
 				    		<div className="service-box mt-5 mx-auto">
 				      			<i className="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-							     <h3 className="mb-3">Broadband</h3>
-							     <p className="text-muted mb-0">We provide expert assistance in outside plant and indoor cabling, security and satellite installation, copper and broadband installation and maintenance, fiber optic and network installations.</p>
+							     <h3 className="mb-3">SECURITY (CCTV CAMERA)</h3>
+							     <p className="text-muted mb-0">Cellwatch provide CCTV  (closed-circuit television)  Security which improved home security a system that allows the use of videos cameras to monitor the property, it helps deterring criminal activity.</p>
 				    		</div>
 				  		</div>
 				  	<div className="col-lg-3 col-md-6 text-center">
 				    	<div className="service-box mt-5 mx-auto">
 				      		<i className="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-				      		<h3 className="mb-3">Ready to Ship</h3>
-				      		<p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+				      		<h3 className="mb-3">TELEPHONE</h3>
+				      		<p className="text-muted mb-0">Cellwatch provide cabling services for new telephone cabling if required. We can also repair and maintain existing telephone lines if there is a problem.</p>
 				    	</div>
 				  	</div>
 					 <div className="col-lg-3 col-md-6 text-center">
 					    <div className="service-box mt-5 mx-auto">
 					      <i className="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-					      <h3 className="mb-3">Up to Date</h3>
-					      <p className="text-muted mb-0">We update dependencies to keep things fresh.</p>
+					      <h3 className="mb-3">VOIP</h3>
+					      <p className="text-muted mb-0">Cellwatch provide Voice Over Internet Protocol (VOIP or IP phone), which is the technology for sending and receiving telephone calls over an IP network, such as the Internet, instead of the traditional telephone lines. We setup the correct hardware to enable this method of communication.</p>
 					    </div>
 					</div>
 					<div className="col-lg-3 col-md-6 text-center">
 					    <div className="service-box mt-5 mx-auto">
 						     <i className="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-						     <h3 className="mb-3">Made with Love</h3>
+						     <h3 className="mb-3">SATELLITE TV</h3>
 						     <p className="text-muted mb-0">You have to make your websites with love these days!</p>
 					    </div>
 				  	</div>
 				  	<div className="col-lg-3 col-md-6 text-center">
 				    	<div className="service-box mt-5 mx-auto">
 				      		<i className="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-				      		<h3 className="mb-3">Ready to Ship</h3>
+				      		<h3 className="mb-3">BROADBAND</h3>
 				      		<p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
 				    	</div>
 				  	</div>
 				  	<div className="col-lg-3 col-md-6 text-center">
 				    	<div className="service-box mt-5 mx-auto">
 				      		<i className="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-				      		<h3 className="mb-3">Ready to Ship</h3>
+				      		<h3 className="mb-3">DATA CABLING</h3>
 				      		<p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
 				    	</div>
 				  	</div>
 				  	<div className="col-lg-3 col-md-6 text-center">
 				    	<div className="service-box mt-5 mx-auto">
 				      		<i className="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-				      		<h3 className="mb-3">Ready to Ship</h3>
+				      		<h3 className="mb-3">FIBRE CABLING</h3>
+				      		<p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+				    	</div>
+				  	</div>
+					  <div className="col-lg-3 col-md-6 text-center">
+				    	<div className="service-box mt-5 mx-auto">
+				      		<i className="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+				      		<h3 className="mb-3">RECRUITMENT</h3>
 				      		<p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
 				    	</div>
 				  	</div>

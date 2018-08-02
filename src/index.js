@@ -38,7 +38,7 @@ ReactDOM.render((
 			<Route exact={true} path="/adminschedule" component={AdminSchedule} />
 		</App>
 	</Router>
-), 
+),
 
 
 document.getElementById('root'));

@@ -7,9 +7,9 @@ class Admin extends Component {
 		e.preventDefault();
 		const form = e.target;
 		let fd =  new FormData()
-		fd.append('caption', form.caption.value)
-		fd.append('description', form.description.value)
-		fd.append('imageupload', form.imageupload.files[0])
+		fd.append('captionbroadband', form.captionbroadband.value)
+		fd.append('descriptionbroadband', form.descriptionbroadband.value)
+		fd.append('imagebroadband', form.imagebroadband.files[0])
 
         axios({
           method: 'POST',
@@ -29,23 +29,29 @@ class Admin extends Component {
 
 	render() {
 	    return (
-	      	<div className="row">
+	      	<div className="row blogContent">
 	      	<hr />
-	    		<div className="col-md-12" style={{"margin":"30px"}}>
+	    		<div className="card" style={{"margin":"8rem 20rem"}}>
 	 				<form encType="multipart/form-data" method="POST" onSubmit={this.handleSubmit}>
-		 				<div className="form-group">
-		 				    <label htmlFor="caption" name="caption">News Title:</label>
-		 				    <input type="text" className="form-control" id="caption" required></input>
+		 				<div className="form-group postContent">
+							<div className="col">
+								<label  htmlFor="captionbroadband" name="captionbroadband">News Title:</label>
+								<input type="text" className="form-control" id="captionbroadband" required></input>
+							</div>
 		 				</div>
 		 				<div className="form-group">
-		 				    <label htmlFor="description" name="description">News Content:</label>
-		 				    <input type="text" className="form-control" id="description" required></input>
-		 				</div>
+						 	<div className="col">
+								<label htmlFor="descriptionbroadband" name="descriptionbroadband">News Content:</label>
+								<input type="text" className="form-control" id="descriptionbroadband" required></input>
+		 					</div>
+						</div>
 		 				<div className="form-group">
-		 				    <label htmlFor="imageupload" name="imageupload">News Picture:</label>
-		 				    <input type="file" name="imageupload" className="form-control" id="imageupload" required></input>
+						 	<div className="col">
+								<label  htmlFor="imagebroadband" name="imagebroadband">News Picture:</label>
+								<input type="file" name="imagebroadband" className="form-control" id="imagebroadband" required></input>
+							</div>
 		 				</div>
-		 				<button type="submit" className="btn btn-default">Submit</button>
+		 				<button type="submit" className="btn btn-primary">Submit</button>
 	 				</form>
 	     		</div>
 	     	</div>

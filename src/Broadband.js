@@ -78,7 +78,7 @@ class Broadband extends Component {
 
   render() {
     let broadband_rows = [];
-      this.state.broadband.map((broadband, i) => 
+      this.state.broadband.map((broadband, i) =>
         broadband_rows.push(
           <div className="col-md-12" key={i}>
             <h4>{broadband.captionbroadband}</h4>
@@ -101,7 +101,7 @@ class Broadband extends Component {
                   <input onChange={this.logChange} className="form-control" value={this.state.captionbroadband} name='captionbroadband' validations={['required']}/>
                   <label>Description</label>
                   <input onChange={this.logChange} className="form-control" value={this.state.descriptionbroadband} name='descriptionbroadband' validations={['required']}/>
-                  
+
                   <div className="submit-section">
                   <button className="btn btn-uth-submit" type="submit">Submit</button>
                   </div>

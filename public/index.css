@@ -242,7 +242,7 @@ header.masthead p {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(240, 95, 64, 0.9);
+  background: rgba(5, 70, 211, 0.475);
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -328,3 +328,54 @@ header.masthead p {
   width: 30%;
   height: 30%;;
 }
+
+
+/* NEWS FORM*/
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+.blogContent {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.headerText {
+  margin-top: 10%;
+}
+
+/* VISSION MISSION & VALUES */
+.vmv {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 120%;
+  color: #057bd3;
+}
+.vmv-desc {
+  text-align: justify;
+}
+.partners,
+.partners2 {
+  margin-top: 5%;
+  text-align: center;
+}
+.part-image img{
+  height: 100%;
+}
+
+/* .broadbandModal {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+} */

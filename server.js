@@ -20,7 +20,7 @@ const upload = multer({ storage });
 const connection = mysql.createConnection({
 	host: '127.0.0.1',
 	user: 'root',
-	password: '12345678',
+	password: '1234',
 	database: 'cellwatchdb',
 	port: 3306
 });
@@ -30,7 +30,7 @@ connection.connect((err) => {
   if (err) {
     console.error('error connecting: ' + err.stack);
     return;
-  } 
+  }
   console.log('connected as id ' + connection.threadId);
 });
 
@@ -83,7 +83,7 @@ router.post('/uploadbroadband', upload.single('imagebroadband'), (req, res, next
   const reqObj = req.body;
   console.log('uploading..')
   if(req.file){
-    
+
     const imagebroadband = req.file.originalname;
     const captionbroadband = reqObj.captionbroadband;
     const descriptionbroadband = reqObj.descriptionbroadband;
@@ -92,11 +92,11 @@ router.post('/uploadbroadband', upload.single('imagebroadband'), (req, res, next
         "captionbroadband": captionbroadband,
         "descriptionbroadband": descriptionbroadband
     }
-    
+
     connection.query('INSERT INTO broadband SET ?', broadband, (error, results, fields) => {
       if (error) throw error;
-      console.log(req.file) 
-      
+      console.log(req.file)
+
       res.json({success:true})
     });
 
@@ -122,30 +122,6 @@ router.post('/updatebroadband', (req, res, next) => {
       res.json(results);
     });
 });
-
-//insert schedule
-router.post('/uploadschedule', (req, res, next) => {
-  const reqObj = req.body;
-  console.log('uploadingschedule..')
-  if(req.file){   
-    const projectname = req.file.projectname;
-    const dateofproject = reqObj.dateofproject;
-    const technician = reqObj.technician;
-    const details = reqObj.details;
-    const schedule = {
-        "projectname": projectname,
-        "dateofproject": dateofproject,
-        "technician": technician,
-        "details": details
-    }   
-    connection.query('INSERT INTO schedule SET ?', schedule, (error, results, fields) => {
-      if (error) throw error;
-      console.log(req.file)
-      console.log('after query')  
-      res.json({success:true})
-    });
-  }
-})
 
 app.listen(port, () => {
  console.log(`api running on port ${port}`);

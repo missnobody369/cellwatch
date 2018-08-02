@@ -41,26 +41,26 @@ class NavBar extends Component {
 			              <a className="nav-link js-scroll-trigger" href="#services">Services</a>
 			            </li>
 			            <li className="nav-item">
-			              <a className="nav-link js-scroll-trigger" href="#about-us">About Us</a>
+			              <a className="nav-link js-scroll-trigger" href="#about-us">About</a>
 			            </li>
 			            <li className="nav-item">
-			              <a className="nav-link js-scroll-trigger" href="#our-staff">Our Staff</a>
+			              <a className="nav-link js-scroll-trigger" href="#our-staff">Staff</a>
 			            </li>
 			            <li className="nav-item">
-			              <a className="nav-link js-scroll-trigger" href="#contact-us">Contact Us</a>
+			              <a className="nav-link js-scroll-trigger" href="#contact-us">Contact</a>
 			            </li>
-			            {(localStorage.usertype === '0') ? 
+			            {(localStorage.usertype === '0') ?
 			            <li className="nav-item"><a className="nav-link" href="/admin">Admin</a></li>
 			            : null }
-			            {(localStorage.usertype === '1') ? 
+			            {(localStorage.usertype === '1') ?
 			            <li className="nav-item"><a className="nav-link" href="/technician">Technician</a></li>
 			            : null }
-			            {(localStorage.usertype === '0') ? 
+			            {(localStorage.usertype === '0') ?
 			            <li className="nav-item"><a className="nav-link" href="/technician">Technician</a></li>
 			            : null }
-			            {(localStorage.token) ? 
+			            {(localStorage.token) ?
 			            <li className="nav-item"><a onClick={this.onLogout} className="nav-link" href="/logout">Logout</a></li>
-			            :               		
+			            :
               			<li className="nav-item"><a className="nav-link" href="/login">Login</a></li>
               			}
 			        </ul>

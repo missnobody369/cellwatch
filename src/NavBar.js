@@ -30,7 +30,7 @@ class NavBar extends Component {
 	        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 		      <div className="container">
 		        <a className="navbar-brand js-scroll-trigger" href="#">
-	                <img src="img/logo.png" alt="Cellwatch logo" className="logo-black"></img>
+	                <img src="img/cw-globe-logo.png" alt="Cellwatch logo" className="logo-black"></img>
 	            </a>
 		        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		            <span className="navbar-toggler-icon"></span>

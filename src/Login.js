@@ -33,19 +33,18 @@ class Login extends Component {
 	render() {
 	    return (
 		    <div>
-	            <div className="col-md-6">
-			       	<form className="col-md-12" onSubmit={this.onLogin} style={{"margin":"200px 300px"}}>
-			       		<div className="form-group">
-					 		<label htmlFor="username" name="username">USERNAME:</label>
-					 		<input type="text" className="form-control" id="username" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} required></input>
+	         <div className="form-group">
+			       	<form className="text-center border border-light p-5" onSubmit={this.onLogin} style={{"margin":"200px 300px"}}>
+							<p className="h4 mb-4">Admin Portal</p>
+			      <div className="form-group">
+					 		<input type="text" className="form-control mb-4" placeholder="E-mail" id="username" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} required></input>
 					 	</div>
 					 	<div className="form-group">
-					 		<label htmlFor="password" name="password">PASSWORD:</label>
-					 		<input type="password" className="form-control" id="password" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})} required></input>
+					 		<input type="password" className="form-control mb-4" placeholder="Password" id="password" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})} required></input>
 					 	</div>
-					 	<button type="submit" className="btn btn-default">Submit</button>
+						 <button className="btn btn-info btn-block my-4 waves-effect z-depth-0" type="submit">Signin</button>
 			       	</form>
-		       	</div>
+		       </div>
 		    </div>
 	    );
 	}

@@ -20,7 +20,7 @@ const upload = multer({ storage });
 const connection = mysql.createConnection({
 	host: '127.0.0.1',
 	user: 'root',
-	password: '1234',
+	password: '',
 	database: 'cellwatchdb',
 	port: 3306
 });

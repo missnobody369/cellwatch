@@ -29,29 +29,29 @@ class Admin extends Component {
 
 	render() {
 	    return (
-	      	<div className="row blogContent">
-	      	<hr />
-	    		<div className="card" style={{"margin":"8rem 20rem"}}>
-	 				<form encType="multipart/form-data" method="POST" onSubmit={this.handleSubmit}>
-		 				<div className="form-group postContent">
+	      	<div className="blogContent">
+	    		<div className="card" >
+	 				<form encType="multipart/form-data" className="border border-light p-5" method="POST" onSubmit={this.handleSubmit}>
+						<p className="text-center h4 mb-4">Sign in</p>
+						<div className="form-group postContent">
 							<div className="col">
 								<label  htmlFor="captionbroadband" name="captionbroadband">News Title:</label>
-								<input type="text" className="form-control" id="captionbroadband" required></input>
+								<input type="text" className="form-control mb-4" id="captionbroadband" required></input>
 							</div>
 		 				</div>
 		 				<div className="form-group">
 						 	<div className="col">
 								<label htmlFor="descriptionbroadband" name="descriptionbroadband">News Content:</label>
-								<input type="text" className="form-control" id="descriptionbroadband" required></input>
+								<textarea className="form-control mb-4" rows="5" id="descriptionbroadband" required></textarea>
 		 					</div>
 						</div>
 		 				<div className="form-group">
 						 	<div className="col">
 								<label  htmlFor="imagebroadband" name="imagebroadband">News Picture:</label>
-								<input type="file" name="imagebroadband" className="form-control" id="imagebroadband" required></input>
+								<input type="file" name="imagebroadband" className="form-control form-control mb-4" id="imagebroadband" required></input>
 							</div>
 		 				</div>
-		 				<button type="submit" className="btn btn-primary">Submit</button>
+		 				<button type="submit" className="btn btn-info btn-block my-4">Submit</button>
 	 				</form>
 	     		</div>
 	     	</div>
